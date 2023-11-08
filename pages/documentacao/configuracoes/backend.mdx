@@ -1,0 +1,52 @@
+import { Callout, Steps } from "nextra/components";
+
+# Backend ⚙️
+
+O backend necessita do [banco de dados](database) para funcionar corretamente, certifique-se de tê-lo previamente configurado.
+
+<Callout type="info" emoji="ℹ️">
+  É essencial que o [Java](https://www.oracle.com/java/technologies/downloads/)
+  já esteja instalado em sua máquina.
+</Callout>
+
+## Passo a passo
+
+Para configurar o backend na sua máquina, siga os passos abaixo:
+
+<Steps>
+
+### Criar um fork no GitHub
+
+### Clonar o repositório
+
+### Configurar o banco de dados
+
+Verifique se a URL do banco de dados na connection-string está correta, assim como os credenciais, no arquivo abaixo:
+
+```properties {2-4} showLineNumbers filename="src/main/resources/application.properties"
+# Datasource PostgreSQL
+spring.datasource.url = jdbc:postgresql://localhost:5432/escola
+spring.datasource.username=admin
+spring.datasource.password=123
+
+# JPA
+spring.jpa.database-plataform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.show_sql=true
+spring.jpa.properties.hibernate.format_sql=true
+```
+
+### Executar a aplicação
+
+Dentro da pasta clonada em sua máquina, execute o comando abaixo:
+
+```shell copy filename="Terminal"
+./mvnw spring-boot:run
+```
+
+</Steps>
+
+<Callout emoji="💡">
+  Você pode parar a aplicação fechando o terminal ou pressionando `CTRL + C` no
+  Windows e Linux, ou `⌘ + .` no macOS.
+</Callout>

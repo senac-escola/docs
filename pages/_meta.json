@@ -1,0 +1,22 @@
+{
+  "index": {
+    "title": "Inicio",
+    "type": "page",
+    "display": "hidden",
+    "theme": {
+      "layout": "raw",
+      "breadcrumb": false
+    }
+  },
+  "documentacao": {
+    "title": "Documentação",
+    "type": "page"
+  },
+  "sobre": {
+    "title": "Sobre",
+    "type": "page",
+    "theme": {
+      "breadcrumb": false
+    }
+  }
+}

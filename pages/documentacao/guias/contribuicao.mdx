@@ -1,0 +1,55 @@
+import { Callout, Steps } from "nextra/components";
+
+# Contribuindo 📦
+
+## Preparando a PR
+
+<Steps>
+
+### Verificar as alterações
+
+```shell copy filename="Terminal"
+git status
+```
+
+### Adicionar as alterações
+
+```shell copy filename="Terminal"
+git add .
+```
+
+Caso necessite adicionar apenas um arquivo ou pasta, utilize o comando abaixo:
+
+```shell copy filename="Terminal"
+git add <nome_do_arquivo_ou_pasta>
+```
+
+### Criar o commit
+
+```shell copy filename="Terminal"
+git commit -m "feat: descrição..."
+```
+
+### Enviar as alterações
+
+```shell copy filename="Terminal"
+git push
+```
+
+### Abrir PR no GitHub
+
+- Abra a página do seu fork no GitHub e clique em `Contribute` > `Open pull request`.
+- Verifique se a branch de origem e a branch de destino estão corretas.
+- Adicione um título e uma descrição para a PR.
+- Adicione as labels de acordo com o tipo de alteração.
+- Adicione quem irá fazer as revisões.
+- Clique em `Create pull request`.
+
+<Callout type="warning" emoji="⚠️">
+  Sempre envie as alterações para a branch <code>develop</code> do repositório
+  original.
+</Callout>
+
+### Aguardar revisão e aprovação
+
+</Steps>

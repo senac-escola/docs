@@ -1,0 +1,52 @@
+import { ExternalLink, MoveRight } from "lucide-react";
+import { Card, Flex, Button, Heading, Theme } from "@radix-ui/themes";
+import Link from "next/link";
+import Image from "next/image";
+import "@radix-ui/themes/styles.css";
+
+<Theme>
+
+  <Flex direction="column" align="center" py="9" gap="6">
+    <Heading align="center" justify="center" size="9" color="grass" >
+      Boas-vindas!
+    </Heading>
+    <Heading size="3">
+      Aqui você encontra todas as informações sobre o desenvolvimento e utilização do projeto.
+    </Heading>
+    <Flex justify="center" align="center" gap="4">
+      <Link href="/documentacao">
+        <Button
+          asChild
+          size="3"
+          variant="solid"
+          color="grass"
+          size={{ initial: "3", xs: "4" }}
+        >
+          Comece por aqui <MoveRight width="16" height="16" />
+        </Button>
+      </Link>
+      <a href="https://senac-escola.vercel.app/" target="_blank">
+        <Button
+          asChild
+          size="3"
+          variant="soft"
+          color="grass"
+          size={{ initial: "3", xs: "4" }}
+        >
+          Demo <ExternalLink width="16" height="16" />
+        </Button>
+      </a>
+    </Flex>
+    <Card size="1" style={{ maxWidth: 900 }}>
+      <Image
+        src="/img/screenshot.png"
+        alt="Bold typography"
+        width={900}
+        height={900}
+        style={{
+          borderRadius: 'var(--radius-4)',
+        }}
+      />
+    </Card>
+  </Flex>
+</Theme>

@@ -1,0 +1,65 @@
+import { Callout, Steps, Tabs } from "nextra/components";
+
+# Banco de dados 🗃️
+
+O banco de dados é essencial para a execução do backend e funcionamento da aplicação como um todo, por tanto, o ideal é que seja o primeiro a ser configurado e estar em funcionamento.
+
+<Callout type="info" emoji="ℹ️">
+  É essencial que o [Docker](https://www.docker.com/get-started/) já esteja
+  instalado em sua máquina.
+</Callout>
+
+<Callout emoji="💡">
+  Alternativamente, você pode instalar e utilizar o
+  [PostgreSQL](https://www.postgresql.org/download/) na sua máquina, sem o uso
+  do Docker, executando a query do arquivo `escola.sql`.
+</Callout>
+
+## Passo a passo
+
+Para configurar o banco de dados na sua máquina, siga os passos abaixo:
+
+<Steps>
+
+### Criar um fork no GitHub
+
+### Clonar o repositório
+
+### Executar o container
+
+Dentro da pasta clonada em sua máquina, execute o comando abaixo:
+
+```shell copy filename="Terminal"
+docker-compose up -d
+```
+
+### Acessar o PgAdmin4
+
+Acesse o endereço local [http://localhost:15432/](http://localhost:15432/) com as credenciais abaixo:
+
+- **Email:** admin@admin.com
+- **Senha:** 123
+
+### Conectar o PostgreSQL
+
+Crie uma nova conexão com as seguintes informações:
+
+- **Name:** Escola
+- **Host name/address:** postgres
+- **Port:** 5432
+- **Maintenance database:** escola
+- **Username:** admin
+- **Password:** 123
+
+Por fim, confira se as tabelas e dados foram criados no banco de dados.
+
+</Steps>
+
+<Callout emoji="💡">
+  Caso queira parar a execução do container, basta rodar o comando:
+  `docker-compose down`.
+</Callout>
+<Callout type="warning" emoji="⚠️">
+  Ao parar a execução do container, todos os dados serão perdidos
+  propositalmente.
+</Callout>

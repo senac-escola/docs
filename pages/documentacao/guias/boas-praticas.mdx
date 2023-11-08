@@ -1,0 +1,85 @@
+import { Steps } from "nextra/components";
+
+# Boas Práticas 💡
+
+Para evitarmos conflitos e problemas com o código, é importante que sigamos algumas boas práticas de desenvolvimento.
+
+<Steps>
+
+### Criação de forks
+
+Sempre crie um fork do repositório antes de começar a desenvolver uma nova funcionalidade, assim você pode trabalhar em um ambiente isolado e enviar as alterações para o repositório principal através de uma pull request.
+
+### Criação de issues
+
+Sempre crie uma issue para cada funcionalidade que for desenvolver, nomeando de forma objetiva e sempre que possível adicionando uma descrição detalhada do que deve ser feito.
+
+### Atualização do repositório
+
+É importante atualizar tanto o repositório local quanto o seu fork, evitando assim conflitos em merges futuros.
+
+### Criação de branchs
+
+Sempre crie uma branca para cada funcionalidade que for desenvolver, nomeando de preferência de acordo com as convenções abaixo:
+
+- `feature/<nome_da_funcionalidade>` para novas funcionalidades;
+- `fix/<nome_da_correção>` para correção de bugs;
+- `chore/<nome_da_alteração>` para alterações de configurações, dependências, etc.;
+- `refactor/<nome_da_refatoração>` para refatoração de código;
+- `docs/<nome_da_alteração>` para alterações na documentação;
+- `test/<nome_do_teste>` para alterações nos testes;
+- `style/<nome_do_estilo>` para alterações de estilos;
+- `ci/<nome_da_alteração>` para alterações no CI/CD;
+- `perf/<nome_da_melhoria>` para alterações de performance;
+- `revert/<nome_da_alteração>` para reverter uma alteração;
+- `merge/<nome_da_alteração>` para merge de branchs.
+
+### Convenções de commits
+
+Utilize das convenções de commits abaixo para facilitar a leitura e entendimento do que foi feito em cada commit.
+
+- `feat: <descrição>` para novas funcionalidades;
+- `fix: <descrição>` para correção de bugs;
+- `chore: <descrição>` para alterações de configurações, dependências, etc.;
+- `refactor: <descrição>` para refatoração de código;
+- `docs: <descrição>` para alterações na documentação;
+- `test: <descrição>` para alterações nos testes;
+- `style: <descrição>` para alterações de estilos;
+- `ci: <descrição>` para alterações no CI/CD;
+- `perf: <descrição>` para alterações de performance;
+- `revert: <descrição>` para reverter uma alteração;
+- `merge: <descrição>` para merge de branchs;
+- `wip: <descrição>` para trabalhos em progresso;
+- `release: <descrição>` para releases;
+- `config: <descrição>` para configurações;
+- `build: <descrição>` para build;
+- `deploy: <descrição>` para deploy;
+- `remove: <descrição>` para remoções;
+- `add: <descrição>` para adições;
+- `update: <descrição>` para atualizações.
+
+### Cobertura de testes
+
+É importante que haja cobertura mínima de testes para as funcionalidades desenvolvidas, assim como verificar se eles estão passando.
+
+### Verificar integridade da aplicação
+
+Sempre execute os comandos de build para verificar se não há nenhum erro que não ocorra em ambiente local de desenvolvimento.
+
+### Ferramentas de qualidade de código
+
+Execute as ferramentas de qualidade de código para verificar se não há nenhum erro de lint ou de formatação de código.
+
+No caso do frontend, vocês pode executar o ESLint com o comando:
+
+```shell copy filename="Terminal"
+npm run lint
+```
+
+E o Prettier para formatar o código com o comando:
+
+```shell copy filename="Terminal"
+npm run format
+```
+
+</Steps>
