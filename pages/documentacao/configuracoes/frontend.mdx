@@ -35,7 +35,7 @@ Verifique se a variável da URL do backend está correta no arquivo a seguir:
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "https://localhost:8080/",
+  baseURL: "http://localhost:8080/api/v1",
   headers: { "Access-Control-Allow-Origin": "*" },
 });
 

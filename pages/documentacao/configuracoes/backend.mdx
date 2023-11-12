@@ -23,17 +23,10 @@ Para configurar o backend na sua máquina, siga os passos abaixo:
 
 Verifique se a URL do banco de dados na connection-string está correta, assim como os credenciais, no arquivo abaixo:
 
-```properties {2-4} showLineNumbers filename="src/main/resources/application.properties"
-# Datasource PostgreSQL
-spring.datasource.url = jdbc:postgresql://localhost:5432/escola
+```properties showLineNumbers filename="src/main/resources/application-local.properties"
+spring.datasource.url=jdbc:postgresql://localhost:5432/escola
 spring.datasource.username=admin
 spring.datasource.password=123
-
-# JPA
-spring.jpa.database-plataform=org.hibernate.dialect.PostgreSQLDialect
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.properties.hibernate.show_sql=true
-spring.jpa.properties.hibernate.format_sql=true
 ```
 
 ### Executar a aplicação
